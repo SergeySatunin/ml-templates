@@ -25,7 +25,7 @@ def get_rf_baseline(features_dataframe, target_column, cv_fold: int, search_para
     sorted_scores = [x[1] for x in feature_importance]
 
     return {'parameters': grid_search.best_params_,
-            'cv_auc': grid_search.best_score_,
+            'cv_score': grid_search.best_score_,
             'model': grid_search.best_estimator_,
             'feature_names' : feature_names,
             'importance_scores': sorted_scores,
